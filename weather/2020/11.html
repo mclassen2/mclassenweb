@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../Chart.js/3.7.0/chart.min.js"></script>
+  <title>November 2020 Temperature</title>
+</head>
+<body>
+  <table style="width: 100%; font-size:20px;" border="0">
+    <tbody>
+      <tr>
+        <div class="container">
+          <canvas id="line-chart" width="800" height="450"></canvas>
+        </div>
+        <script>
+        new Chart(document.getElementById("line-chart"), {
+          type: 'line',
+          data: {
+            labels: ["Nov 1 2020","Nov 2 2020","Nov 3 2020","Nov 4 2020","Nov 5 2020","Nov 6 2020","Nov 7 2020","Nov 8 2020","Nov 9 2020","Nov 10 2020","Nov 11 2020","Nov 12 2020","Nov 13 2020","Nov 14 2020","Nov 15 2020","Nov 16 2020","Nov 17 2020","Nov 18 2020","Nov 19 2020","Nov 20 2020","Nov 21 2020","Nov 22 2020","Nov 23 2020","Nov 24 2020","Nov 25 2020","Nov 26 2020","Nov 27 2020","Nov 28 2020","Nov 29 2020","Nov 30 2020"],
+            datasets: [{ 
+              data: [17.6,15.1,13,13.5,8.2,0.7,-0.5,-5.9,-0.9,2.1,-7.2,0.1,-0.5,1.2,-1.7,-6.9,-3.7,-3.7,-9.1,-1.9,0.9,-4.4,-1.5,-0.7,1.4,2.6,5.4,1,-1,4.8],
+              label: "Max",
+              borderColor: "red",
+              backgroundColor: "red",
+              fill: false
+            }, { 
+              data: [0.5,5.4,3.1,2.4,-0.2,-1.1,-8.9,-11.2,-13.3,-8.1,-14.1,-14.1,-7.6,-6.6,-8.8,-11.2,-12.3,-9.8,-15.3,-17,-9.3,-12.2,-11.2,-9.5,-4.4,-5.7,-6.1,-8.6,-9.4,-2.1],
+              label: "Min",
+              borderColor: "blue",
+              backgroundColor: "blue",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Date',
+                color: '#911',
+                font: {
+                  family: 'Comic Sans MS',
+                  size: 20,
+                  weight: 'bold',
+                  lineHeight: 1.2,
+                },
+                padding: {top: 20, left: 0, right: 0, bottom: 0}
+              }
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: '°C',
+                color: '#911',
+                font: {
+                  family: 'Comic Sans MS',
+                  size: 20,
+                  weight: 'bold',
+                  lineHeight: 1.2
+                }
+              }
+            }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index',
+          },
+          plugins:{
+            title: {
+              display: true,
+              text: 'November Temperature (in °C)',
+              color: 'black',
+              font: {
+                family: 'Comic Sans MS',
+                size: 20,
+                weight: 'bold',
+                lineHeight: 1.2,
+              }
+            },
+            tooltip: {
+              titleFont: {
+                size: 20,
+              },
+              bodyFont: {
+                size: 20,
+              },
+              bodyAlign: 'left'
+            }
+          }
+        }
+      });
+      </script>
+      </tr>
+      <table style="width: 100%; font-size:20px;">
+        <tr>
+          <td><a href="../2013/index.html">2013</a></td>
+          <td>January</td>
+          <td>February</td>
+          <td>March</td>
+          <td>April</td>
+          <td>May</td>
+          <td>June</td>
+          <td><a href="../2013/07.html">July</a></td>
+          <td><a href="../2013/08.html">August</a></td>
+          <td><a href="../2013/09.html">September</a></td>
+          <td><a href="../2013/10.html">October</a></td>
+          <td><a href="../2013/11.html">November</a></td>
+          <td><a href="../2013/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2014/index.html">2014</a></td>
+          <td><a href="../2014/01.html">January</a></td>
+          <td><a href="../2014/02.html">February</a></td>
+          <td><a href="../2014/03.html">March</a></td>
+          <td><a href="../2014/04.html">April</a></td>
+          <td><a href="../2014/05.html">May</a></td>
+          <td><a href="../2014/06.html">June</a></td>
+          <td><a href="../2014/07.html">July</a></td>
+          <td><a href="../2014/08.html">August</a></td>
+          <td><a href="../2014/09.html">September</a></td>
+          <td><a href="../2014/10.html">October</a></td>
+          <td><a href="../2014/11.html">November</a></td>
+          <td><a href="../2014/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2015/index.html">2015</a></td>
+          <td><a href="../2015/01.html">January</a></td>
+          <td><a href="../2015/02.html">February</a></td>
+          <td><a href="../2015/03.html">March</a></td>
+          <td><a href="../2015/04.html">April</a></td>
+          <td><a href="../2015/05.html">May</a></td>
+          <td><a href="../2015/06.html">June</a></td>
+          <td><a href="../2015/07.html">July</a></td>
+          <td><a href="../2015/08.html">August</a></td>
+          <td><a href="../2015/09.html">September</a></td>
+          <td><a href="../2015/10.html">October</a></td>
+          <td><a href="../2015/11.html">November</a></td>
+          <td><a href="../2015/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2016/index.html">2016</a></td>
+          <td><a href="../2016/01.html">January</a></td>
+          <td><a href="../2016/02.html">February</a></td>
+          <td><a href="../2016/03.html">March</a></td>
+          <td><a href="../2016/04.html">April</a></td>
+          <td><a href="../2016/05.html">May</a></td>
+          <td><a href="../2016/06.html">June</a></td>
+          <td><a href="../2016/07.html">July</a></td>
+          <td><a href="../2016/08.html">August</a></td>
+          <td><a href="../2016/09.html">September</a></td>
+          <td><a href="../2016/10.html">October</a></td>
+          <td><a href="../2016/11.html">November</a></td>
+          <td><a href="../2016/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2017/index.html">2017</a></td>
+          <td><a href="../2017/01.html">January</a></td>
+          <td><a href="../2017/02.html">February</a></td>
+          <td><a href="../2017/03.html">March</a></td>
+          <td><a href="../2017/04.html">April</a></td>
+          <td><a href="../2017/05.html">May</a></td>
+          <td><a href="../2017/06.html">June</a></td>
+          <td><a href="../2017/07.html">July</a></td>
+          <td><a href="../2017/08.html">August</a></td>
+          <td><a href="../2017/09.html">September</a></td>
+          <td><a href="../2017/10.html">October</a></td>
+          <td><a href="../2017/11.html">November</a></td>
+          <td><a href="../2017/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2018/index.html">2018</a></td>
+          <td><a href="../2018/01.html">January</a></td>
+          <td><a href="../2018/02.html">February</a></td>
+          <td><a href="../2018/03.html">March</a></td>
+          <td><a href="../2018/04.html">April</a></td>
+          <td><a href="../2018/05.html">May</a></td>
+          <td><a href="../2018/06.html">June</a></td>
+          <td><a href="../2018/07.html">July</a></td>
+          <td><a href="../2018/08.html">August</a></td>
+          <td><a href="../2018/09.html">September</a></td>
+          <td><a href="../2018/10.html">October</a></td>
+          <td><a href="../2018/11.html">November</a></td>
+          <td><a href="../2018/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2019/index.html">2019</a></td>
+          <td><a href="../2019/01.html">January</a></td>
+          <td><a href="../2019/02.html">February</a></td>
+          <td><a href="../2019/03.html">March</a></td>
+          <td><a href="../2019/04.html">April</a></td>
+          <td><a href="../2019/05.html">May</a></td>
+          <td><a href="../2019/06.html">June</a></td>
+          <td><a href="../2019/07.html">July</a></td>
+          <td><a href="../2019/08.html">August</a></td>
+          <td><a href="../2019/09.html">September</a></td>
+          <td><a href="../2019/10.html">October</a></td>
+          <td><a href="../2019/11.html">November</a></td>
+          <td><a href="../2019/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="index.html">2020</a></td>
+          <td><a href="01.html">January</a></td>
+          <td><a href="02.html">February</a></td>
+          <td><a href="03.html">March</a></td>
+          <td><a href="04.html">April</a></td>
+          <td><a href="05.html">May</a></td>
+          <td><a href="06.html">June</a></td>
+          <td><a href="07.html">July</a></td>
+          <td><a href="08.html">August</a></td>
+          <td><a href="09.html">September</a></td>
+          <td><a href="10.html">October</a></td>
+          <td style="background-color:#000000; color:white;">November</td>
+          <td><a href="12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2021/index.html">2021</a></td>
+          <td><a href="../2021/01.html">January</a></td>
+          <td><a href="../2021/02.html">February</a></td>
+          <td><a href="../2021/03.html">March</a></td>
+          <td><a href="../2021/04.html">April</a></td>
+          <td><a href="../2021/05.html">May</a></td>
+          <td><a href="../2021/06.html">June</a></td>
+          <td><a href="../2021/07.html">July</a></td>
+          <td><a href="../2021/08.html">August</a></td>
+          <td><a href="../2021/09.html">September</a></td>
+          <td><a href="../2021/10.html">October</a></td>
+          <td><a href="../2021/11.html">November</a></td>
+          <td><a href="../2021/12.html">December</a></td>
+        </tr>
+      </table>
+    </tbody>
+  </table>
+</body>
+</html>
