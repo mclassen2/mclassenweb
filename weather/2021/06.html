@@ -10,20 +10,29 @@
     tr:nth-child(even) {
       background-color: rgba(150, 212, 212, 0.4);
     }
+    .container {
+      width: 100%;
+    }
+    #line-chart {
+      width: 100% !important;
+      height: 500px !important;
+    }
     </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="../Chart.js/3.7.0/chart.min.js"></script>
+  <script src="../Chart.js/4.5.1/dist/chart.umd.js"></script>
   <title>June 2021 Temperature</title>
 </head>
 <body>
   <table style="width: 100%; font-size:20px;" border="0">
     <tbody>
       <tr>
-        <div class="container">
-          <canvas id="line-chart" width="800" height="450"></canvas>
-        </div>
+        <td colspan="13">
+          <div class="container">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </td>
         <script>
         new Chart(document.getElementById("line-chart"), {
           type: 'line',
@@ -57,6 +66,8 @@
           ]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             x: {
               display: true,
@@ -283,6 +294,36 @@
           <td><a href="../2023/10.html">October</a></td>
           <td><a href="../2023/11.html">November</a></td>
           <td><a href="../2023/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2024/index.html">2024</a></td>
+          <td><a href="../2024/01.html">January</a></td>
+          <td><a href="../2024/02.html">February</a></td>
+          <td><a href="../2024/03.html">March</a></td>
+          <td><a href="../2024/04.html">April</a></td>
+          <td><a href="../2024/05.html">May</a></td>
+          <td><a href="../2024/06.html">June</a></td>
+          <td><a href="../2024/07.html">July</a></td>
+          <td><a href="../2024/08.html">August</a></td>
+          <td><a href="../2024/09.html">September</a></td>
+          <td><a href="../2024/10.html">October</a></td>
+          <td><a href="../2024/11.html">November</a></td>
+          <td><a href="../2024/12.html">December</a></td>
+        </tr>
+        <tr>
+          <td><a href="../2025/index.html">2025</a></td>
+          <td><a href="../2025/01.html">January</a></td>
+          <td><a href="../2025/02.html">February</a></td>
+          <td><a href="../2025/03.html">March</a></td>
+          <td><a href="../2025/04.html">April</a></td>
+          <td><a href="../2025/05.html">May</a></td>
+          <td><a href="../2025/06.html">June</a></td>
+          <td><a href="../2025/07.html">July</a></td>
+          <td><a href="../2025/08.html">August</a></td>
+          <td><a href="../2025/09.html">September</a></td>
+          <td><a href="../2025/10.html">October</a></td>
+          <td><a href="../2025/11.html">November</a></td>
+          <td><a href="../2025/12.html">December</a></td>
         </tr>
       </table>
     </tbody>

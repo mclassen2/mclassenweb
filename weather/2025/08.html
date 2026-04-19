@@ -10,6 +10,13 @@
     tr:nth-child(even) {
       background-color: rgba(150, 212, 212, 0.4);
     }
+    .container {
+      width: 100%;
+    }
+    #line-chart {
+      width: 100% !important;
+      height: 500px !important;
+    }
     </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +28,11 @@
   <table style="width: 100%; font-size:20px;" border="0">
     <tbody>
       <tr>
-        <div class="container">
-          <canvas id="line-chart" width="800" height="450"></canvas>
-        </div>
+        <td colspan="13">
+          <div class="container">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </td>
         <script>
         new Chart(document.getElementById("line-chart"), {
           type: 'line',
@@ -45,6 +54,8 @@
           ]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           scales: {
             x: {
               display: true,
